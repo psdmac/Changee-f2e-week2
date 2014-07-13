@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Changee Learning Path - 製作第一個靜態頁面</title>
+
+		<meta name="description" content="製作第一個靜態頁面">
+		<meta name="author" content="Mark Wu">
+    <meta property="og:title" content="Changee Learning Path - 製作第一個靜態頁面">
+    <meta property="og:description" content="在網路的時代，我們在開始學習新領域時，可以透過 Google 找到許多學習的「資訊」，然而過多的資訊反而無法判斷什麼才是適合自己的「資源」。現有的學習資源非常豐富，但卻散落在各處，使得「自我學習」時總是花費大量時間在搜尋適合自己的資訊。因此我們希望能夠建立 Changee Learning Path「學習路徑平台」，整合資源與資訊，透過「學習分類帽」、「學習軌跡」、「實體資源」三個主要項目，建立方便自學的「學習路徑平台」。" />
+    <meta property="og:image" content="http://week1.learning-path.info/images/week1-graph.png">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+		<link rel="stylesheet" href="css/sample.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div id="seo-wrapper">
+      <h1>Changee Learning Path - 製作第一個靜態頁面</h1>
+      <p>
+        在網路的時代，我們在開始學習新領域時，可以透過 Google 找到許多學習的「資訊」，然而過多的資訊反而無法判斷什麼才是適合自己的「資源」。現有的學習資源非常豐富，但卻散落在各處，使得「自我學習」時總是花費大量時間在搜尋適合自己的資訊。因此我們希望能夠建立 Changee Learning Path「學習路徑平台」，整合資源與資訊，透過「學習分類帽」、「學習軌跡」、「實體資源」三個主要項目，建立方便自學的「學習路徑平台」。
+      </p>
+      <img src="http://week1.learning-path.info/images/week1-graph.png">
+    </div>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section data-background="images/congruent_pentagon.png" data-background-repeat="repeat">
+						<h1>第一個靜態頁面</h1>
+						<h3>HTML  CSS  Git 入門</h3>
+						<img src="images/learningpath.jpg">
+						<p>
+							<small><a target="_blank" href="https://www.facebook.com/changeeinfo">Changee</a> | <a target="_blank" href="http://learning-path.info">Learning Path</a></small>
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>今日任務</h2>
+						<p>完成一個個人履歷</p>
+						<p>好像很多東西，別擔心，一步一步來</p>	
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>HTML 基礎</h1>
+					</section>
+					<section>
+						<h2>HTML 文件架構</h2>
+						<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;&lt;/title&gt;
+    // CSS 樣式, js 程式
+  &lt;/head&gt;
+  &lt;body&gt;
+  // 頁面裡面的內容
+  &lt;/body&gt;
+&lt;/html&gt;
+						</code></pre>
+            <ul>
+              <li>&lt;!DOCTYPE html&gt; 宣告樣式</li>
+              <li>&lt;title&gt; 顯示在瀏覽器分頁的標題</li>
+              <li>&lt;meta&gt; 放關於網頁的其他資訊</li>
+            </ul>
+					</section>
+          <section>
+            <h2><a target="https://github.com/h5bp/html5-boilerplate" href="">h5bp</a></h2>
+            <ul>
+              <li>基本的 Web 樣板</li>
+              <li>針對 HTML5 優化，並且相容舊瀏覽器</li>
+              <li>內建常用 Javascript (jQuery, Modernizr)</li>
+              <li>內建 Normalize.css</li>
+            </ul>
+          </section>
+					<section>
+						<h2>標籤 tags</h2>
+						<p>運用標籤來告訴瀏覽器內容的結構與語意</p>
+						<div class="large">
+							<pre><code data-trim>
+					    	<h1>Changee</h1>
+					    </code></pre>
+						</div>
+						<ul>
+							<li><code>&lt;h1&gt;</code> 起始標籤</li>
+							<li><code>&lt;/h1&gt;</code> 結尾標籤</li>
+						</ul>
+					</section>
+					<section>
+						<h2>標題 Heading</h2>
+						<ul>
+							<li>h1 ~ h6</li>
+							<li>h1 一個頁面只有一個</li>
+							<li>次要標題用 h2，依序遞減</li>
+						</ul>
+					</section>
+					<section>
+						<h2>段落 Paragraph</h2>
+						<pre><code data-trim style="word-wrap: break-word;">&lt;p&gt;在網路的時代，我們在開始學習新領域時，可以透過 Google 找到許多學習的「<strong>資訊</strong>」，<br>然而過多的資訊反而無法判斷什麼才是適合自己的「<strong>資源</strong>」。<br>現有的學習資源非常豐富，但卻散落在各處，使得「<em>自我學習</em>」時總是花費大量時間在搜尋適合自己的資訊。&lt;/p&gt;</code></pre>
+						<ul>
+							<li><code>&lt;em&gt;</code> 強調</li>
+							<li><code>&lt;strong&gt;</code> 重要</li>
+							<li><code>&lt;br&gt;</code> 換行</li>
+						</ul>
+					</section>
+          <section>
+            <h2>清單 List</h2>
+            <ul>
+              <li>分為有序清單<code>&lt;ol&gt;</code>與無序清單<code>&lt;ul&gt;</code></li>
+              <li>與無序清單<code>&lt;ul&gt;</code>內容彼此間沒有順序關係（採買清單)</li>
+              <li>有序清單<code>&lt;ol&gt;</code>內容有順序關係（課程章節、行事曆）</li>
+              <li><code>&lt;li&gt;</code>要包在裡面</li>
+            </ul>
+            <pre class="left-col"><code>
+&lt;ul&gt;
+  &lt;li&gt;什麼是前端？&lt;/li&gt;
+  &lt;li&gt;為什麼要學前端？&lt;/li&gt;
+  &lt;li&gt;前端的美好，引發學前端的慾望。&lt;/li&gt;
+  &lt;li&gt;如何自學前端開發。&lt;/li&gt;
+  &lt;ol&gt;
+    &lt;li&gt;線上教學資源&lt;/li&gt;
+    &lt;li&gt;書籍&lt;/li&gt;
+    &lt;li&gt;每天需要追蹤的資訊&lt;/li&gt; 
+    &lt;li&gt;哪些可以參加的活動&lt;/li&gt;
+  &lt;/ol&gt; 
+  &lt;li&gt;網站產生器&lt;/li&gt;
+  &lt;li&gt;前端開發工具簡介&lt;/li&gt;
+&lt;/ul&gt;
+            </code></pre>
+            <div class="right-col">
+              <ul>
+                <li>什麼是前端？</li>
+                <li>為什麼要學前端？</li>
+                <li>前端的美好，引發學前端的慾望。</li>
+                <li>如何自學前端開發。</li>
+                <ol>
+                  <li>線上教學資源</li>
+                  <li>書籍</li>
+                  <li>每天需要追蹤的資訊</li> 
+                  <li>哪些可以參加的活動</li>
+                </ol> 
+                <li>網站產生器</li>
+                <li>前端開發工具簡介</li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>屬性</h2>
+            <img src="images/html-syntax-outline.png">
+            <p>Source: <a target="_blank" href="http://learn.shayhowe.com/html-css/building-your-first-web-page/">Learn To Code</a></p>
+            <pre><code>&lt;標籤名 屬性1="值1" 屬性2="值2"&gt;</code></pre>
+            <pre><code>&lt;input type="email"&gt;</code></pre>
+            <pre><code>&lt;input type="email" placeholder="Your email"&gt;</code></pre>
+            <pre><code>&lt;input type="submit"&gt;</code></pre>
+            <p>屬性就像是每一個標籤的選項</p>
+          </section>
+          <section>
+            <h2>連結 Link</h2>
+            <pre><code data-trim>
+              &lt;a target="_blank" href="https://www.facebook.com/changeeinfo"&gt;
+  CHANGEE粉絲團
+&lt;/a&gt;
+            </code></pre>
+            <ul>
+              <li>href 屬性：可使用絕對路徑、相對路徑、網址、目標id、mailTo</li>
+              <li>target 屬性：_blank（新分頁中開啟）、_self（原來分頁中開啟）</li>
+            </ul>
+          </section>
+          <section>
+            <h2>圖片 img</h2>
+            <pre><code data-trim>
+              &lt;img src="../img/changee_logo.jpg" width="120" height="120" alt="Changee"&gt;
+            </code></pre>
+            <ul>
+              <li>alt 屬性：描述圖片</li>
+              <li>由單一 tag 構成，沒有結尾 tag</li>
+              <li>&lt;br&gt; &lt;input&gt; 也都是單一 tag 的 element</li>
+            </ul>
+          </section>
+          <section>
+            <h2>無語意標籤 div, span</h2>
+            <a class="jsbin-embed" href="http://jsbin.com/maquk/1/embed?html,css,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+          </section>
+          <section>
+            <h1>動手做吧</h1>
+          </section>
+				</section>
+				<section>
+          <section>
+            <h1>CSS 基礎</h1>
+          </section>
+          <section>
+            <h2>如何套用？</h2>
+            <ul>
+              <li>inline CSS：直接寫在 tag 裡面</li>
+              <pre><code data-trim>
+              &lt;img src="../img/changee_logo.jpg" style="margin-top: 50px" alt="Changee"&gt;
+              </code></pre>
+              <li>internal CSS &lt;style&gt;&lt;/style&gt; 放在 &lt;head&gt;&lt;/head&gt; 裡面</li>
+              <pre><code data-trim>
+              &lt;style&gt;
+  h1 {
+    font-size: 72px;
+  }
+&lt;/style&gt;
+              </code></pre>
+              <li>external CSS：引入外部 CSS 檔案</li>
+              <pre><code data-trim>
+<link rel="stylesheet" href="style.css">
+              </code></pre>
+            </ul>
+          </section>
+          <section>
+            <h2>CSS Syntax</h2>
+            <img src="images/selector.gif">
+            <p>Source: <a target="_blank" href="http://www.w3schools.com/css/css_syntax.asp">W3Schools</a></p>
+          </section>
+          <section>
+            <h2>Class and ID Selectors</h2>
+            <ul>
+              <li>class 選取器使用 "." (full stop)</li>
+              <li>id 選取器使用 "#" (hash character)</li>
+              <li>id 用來識別唯一的元素</li>
+              <li>class 用來識別多個元素</li>
+            </ul>
+          </section>
+          <section>
+            <h2>背景 Background</h2>
+            <a class="jsbin-embed" href="http://jsbin.com/cukiyoma/3/embed?html,css,output">Changee Week2 - Background</a><script src="http://static.jsbin.com/js/embed.js"></script>
+            <p>background-attachment, background-clip, background-position, background-repeat, background-size 跟背景有關的內容很多，多用經驗才會多。</p>
+          </section>
+          <section>
+            <h2>文字 Font</h2>
+            <a class="jsbin-embed" href="http://jsbin.com/dakeqe/1/embed?html,css,output">Changee Week2 - font</a><script src="http://static.jsbin.com/js/embed.js"></script>
+            <p>px 與 em 的不同</p>
+          </section>
+          <section>
+            <h2>inline, block, inline-block</h2>
+            <a class="jsbin-embed" href="http://jsbin.com/cavozu/1/embed?html,css,output">block inline inline-block</a><script src="http://static.jsbin.com/js/embed.js"></script>
+          </section>
+          <section>
+            <h2>Padding, Margin</h2>
+            <a class="jsbin-embed" href="http://jsbin.com/yuruj/1/embed?html,css,output">padding margin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+          </section>
+          <section>
+            <h2>Border-radius</h2>
+            <a class="jsbin-embed" href="http://jsbin.com/zayik/1/embed?html,css,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+            <p><a target="_blank" href="https://www.youtube.com/watch?v=b9HGzJIcfDE">Lea Verou: The Humble Border-radius</a></p>
+          </section>
+          <section>
+            <h1>動手時間</h1>
+          </section>
+				</section>
+				<section>
+          <section>
+            <h1>進階美化</h1>
+          </section>
+          <section>
+            <h2><a target="_blank" href="http://fortawesome.github.io/Font-Awesome">Font Awesome</a></h2>
+            <ul>
+              <li>Icon font</li>
+              <li>向量文字，放大解析度還是一樣</li>
+            </ul>
+            <a class="jsbin-embed" href="http://jsbin.com/zimiq/1/embed?html,css,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+          </section>
+          <section>
+            <h2>CSS3 box-shadow</h2>
+            <a class="jsbin-embed" href="http://jsbin.com/facuc/1/embed?html,css,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+            <p>Box-shadow 產生器：<a target="_blank" href="http://css3gen.com/box-shadow/">CSS3 Box Shadow Generator</a></p>
+          </section>
+          <section>
+            <h2>CSS3 transition</h2>
+            <a class="jsbin-embed" href="http://jsbin.com/wojuxu/1/embed?html,css,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+            <p>可以玩的東西太多了，修行看個人。</p>
+          </section>
+				</section>
+        <section>
+          <section>
+            <h1>GitHub 入門</h1> 
+          </section>
+          <section>
+            <h2>版本控制</h2>
+            <img src="images/git-flow.png">
+          </section>
+          <section>
+            <h2>今天要做的事</h2> 
+            <img src="images/local-remote.png">
+          </section>
+          <section>
+            <h2>1 - 建立一個專案</h2>
+            <img src="images/new-repository.png">
+            <img src="images/repo-name.png">
+          </section>
+          <section>
+            <h2>2 - 將專案下載下來</h2>
+            <img src="images/git-clone.png">
+            <img src="images/git-clone2.png">
+            <pre>
+              <code data-trim>git clone https://github.com/psdmac/Changee-learning-path.git</code>
+            </pre>
+          </section>
+          <section>
+            <h2>3 - 將新增加的檔案加入管理</h2>
+            <img src="images/git-add1.png">
+            <pre>
+              <code data-trim>git add . // 將所有檔案加入管理</code>
+            </pre>
+          </section>
+          <section>
+            <h2>4 - 將程式碼提交</h2>
+            <img src="images/git-commit-am.png">
+            <pre>
+              <code data-trim>git commit -am "first commit"</code>
+            </pre>
+          </section>
+          <section>
+            <h2>5 - 將提交程式碼推至遠端</h2>
+            <img src="images/git-push.png">
+            <img src="images/git-log.png">
+            <pre>
+              <code data-trim>git push origin master
+git log</code>
+            </pre>
+          </section>
+          <section>
+            <h2>6 - 開啟靜態頁面功能</h2>
+            <img src="images/git-checkout-b.png">
+            <img src="images/git-push-origin-gh-pages.png">
+            <pre>
+              <code data-trim>git checkout -b gh-pages</code>
+            </pre>
+          </section>
+        </section>
+			</div>
+
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script type="text/javascript" src="js/sample.js"></script>
+    <script type="text/javascript">
+      $('script[type="text/x-sample"]').sample();
+    </script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-51808149-1', 'week1.learning-path.info', {
+            'cookieDomain': 'none'
+        });
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+    </script>
+
+	</body>
+</html>
